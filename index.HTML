@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maternal & Women's Health — Comprehensive Clinical Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --ink:#1a2b2a;
+    --paper:#f7f1e8;
+    --paper-2:#efe7d8;
+    --teal:#0d4f4a;
+    --teal-dark:#073634;
+    --teal-light:#1d6e68;
+    --coral:#d9603f;
+    --coral-soft:#e88a6e;
+    --gold:#c89855;
+    --sage:#7a9b7e;
+    --rose:#b95871;
+    --muted:#6b7d7c;
+    --line:rgba(13,79,74,0.15);
+    --shadow: 0 30px 60px -25px rgba(7,54,52,0.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+    font-size:16px;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--coral);color:var(--paper)}
+
+  /* ---------- Decorative background ---------- */
+  .bg-deco{
+    position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(900px 600px at 85% -10%, rgba(217,96,63,0.12), transparent 60%),
+      radial-gradient(700px 500px at -10% 30%, rgba(13,79,74,0.10), transparent 60%),
+      radial-gradient(800px 600px at 50% 110%, rgba(200,152,85,0.10), transparent 60%),
+      linear-gradient(180deg,#f9f4ec 0%,#f3ebdc 100%);
+  }
+  .grain{
+    position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- Header / Hero ---------- */
+  header.hero{
+    position:relative;
+    padding:120px 8vw 80px;
+    overflow:hidden;
+  }
+  .hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:2}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Manrope',sans-serif;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    font-size:12px;color:var(--coral);
+    padding:8px 16px;border:1px solid var(--coral);border-radius:100px;
+    background:rgba(217,96,63,0.06);
+    margin-bottom:28px;
+  }
+  .eyebrow i{font-size:11px}
+  h1.title{
+    font-family:'Fraunces',serif;
+    font-weight:300;
+    font-size:clamp(48px,7vw,108px);
+    line-height:0.95;
+    letter-spacing:-0.03em;
+    color:var(--teal-dark);
+    margin-bottom:24px;
+  }
+  h1.title em{
+    font-style:italic;font-weight:500;color:var(--coral);
+    font-variation-settings:"opsz" 144;
+  }
+  .lead{
+    max-width:680px;
+    font-size:clamp(17px,1.4vw,21px);
+    color:var(--muted);
+    font-weight:400;
+  }
+  .hero-meta{
+    margin-top:48px;display:flex;flex-wrap:wrap;gap:36px;
+    border-top:1px solid var(--line);padding-top:32px;
+  }
+  .hero-meta div{display:flex;flex-direction:column;gap:4px}
+  .hero-meta .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .hero-meta .v{font-family:'Fraunces',serif;font-size:22px;color:var(--teal-dark);font-weight:500}
+
+  .hero-deco{
+    position:absolute;right:-100px;top:60px;width:520px;height:520px;
+    border-radius:50%;opacity:.5;z-index:1;
+    background:radial-gradient(circle at 30% 30%, var(--coral-soft), transparent 60%);
+    filter:blur(20px);
+    animation:float 14s ease-in-out infinite;
+  }
+  @keyframes float{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%{transform:translate(-30px,40px) scale(1.08)}
+  }
+
+  /* ---------- TOC nav ---------- */
+  nav.toc{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,241,232,0.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .toc-inner{
+    max-width:1280px;margin:0 auto;padding:14px 8vw;
+    display:flex;align-items:center;gap:20px;overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .toc-inner::-webkit-scrollbar{display:none}
+  .toc-label{
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;white-space:nowrap;
+  }
+  .toc a{
+    white-space:nowrap;
+    font-size:13px;font-weight:600;color:var(--teal-dark);
+    text-decoration:none;padding:6px 12px;border-radius:100px;
+    transition:all .25s ease;
+  }
+  .toc a:hover{background:var(--teal-dark);color:var(--paper)}
+
+  /* ---------- Layout ---------- */
+  main{padding:60px 8vw 120px;max-width:1280px;margin:0 auto}
+  .section{
+    margin-top:96px;
+    scroll-margin-top:80px;
+  }
+  .section:first-child{margin-top:0}
+
+  .section-head{
+    display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:end;
+    border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:48px;
+  }
+  .section-num{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+    font-size:80px;line-height:1;color:var(--coral);
+  }
+  .section-head h2{
+    font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(32px,4vw,52px);line-height:1.05;
+    color:var(--teal-dark);letter-spacing:-0.02em;
+  }
+  .section-head h2 em{font-style:italic;color:var(--coral)}
+  .section-kicker{
+    grid-column:2;font-size:14px;color:var(--muted);margin-top:8px;font-weight:500;
+  }
+
+  /* ---------- Cards ---------- */
+  .card{
+    background:rgba(255,253,247,0.7);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:36px;
+    box-shadow:0 1px 0 rgba(255,255,255,0.6) inset, var(--shadow);
+    margin-bottom:24px;
+    backdrop-filter:blur(4px);
+  }
+  .card.tinted-teal{background:linear-gradient(135deg, rgba(13,79,74,0.05), rgba(122,155,126,0.04));border-color:rgba(13,79,74,0.2)}
+  .card.tinted-coral{background:linear-gradient(135deg, rgba(217,96,63,0.06), rgba(232,138,110,0.03));border-color:rgba(217,96,63,0.2)}
+  .card.tinted-gold{background:linear-gradient(135deg, rgba(200,152,85,0.07), rgba(247,225,180,0.04));border-color:rgba(200,152,85,0.25)}
+
+  .card h3{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:26px;color:var(--teal-dark);margin-bottom:16px;
+    display:flex;align-items:center;gap:14px;letter-spacing:-0.01em;
+  }
+  .card h3 .ic{
+    width:42px;height:42px;border-radius:12px;
+    display:grid;place-items:center;
+    background:var(--teal-dark);color:var(--paper);
+    font-size:16px;flex-shrink:0;
+  }
+  .card.tinted-coral h3 .ic{background:var(--coral)}
+  .card.tinted-gold h3 .ic{background:var(--gold)}
+  .card h4{
+    font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;
+    letter-spacing:.15em;text-transform:uppercase;
+    color:var(--coral);margin:24px 0 10px;
+  }
+  .card p{margin-bottom:12px;color:var(--ink)}
+  .card ul{margin:8px 0 16px 0;padding-left:0;list-style:none}
+  .card ul li{
+    position:relative;padding:6px 0 6px 28px;
+    border-bottom:1px dashed rgba(13,79,74,0.08);
+  }
+  .card ul li:last-child{border-bottom:none}
+  .card ul li::before{
+    content:"";position:absolute;left:0;top:14px;
+    width:14px;height:14px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, var(--coral-soft), var(--coral));
+  }
+  .card ul li b{color:var(--teal-dark);font-weight:700}
+
+  /* ---------- Q&A callout ---------- */
+  .qa{
+    margin:24px 0;
+    border-left:3px solid var(--coral);
+    background:linear-gradient(90deg, rgba(217,96,63,0.08), transparent 70%);
+    padding:18px 24px;border-radius:0 12px 12px 0;
+  }
+  .qa .q{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:500;
+    color:var(--coral);font-size:15px;margin-bottom:6px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .qa .q i{font-size:13px}
+  .qa .a{color:var(--ink);font-weight:500}
+
+  /* ---------- Grid layouts ---------- */
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media (max-width:900px){
+    .grid-2,.grid-3{grid-template-columns:1fr}
+    .section-head{grid-template-columns:1fr;gap:8px}
+    .section-kicker{grid-column:1}
+    .card{padding:24px}
+    header.hero{padding:80px 6vw 60px}
+    main{padding:40px 6vw 80px}
+  }
+
+  /* ---------- NYHA classes ---------- */
+  .nyha-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+  .nyha{
+    padding:22px;border-radius:14px;border:1px solid var(--line);
+    background:rgba(255,253,247,0.6);
+    position:relative;overflow:hidden;
+  }
+  .nyha::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:5px;
+  }
+  .nyha.c1::before{background:#7a9b7e}
+  .nyha.c2::before{background:#c89855}
+  .nyha.c3::before{background:#d9603f}
+  .nyha.c4::before{background:#b95871}
+  .nyha .cls{
+    font-family:'Fraunces',serif;font-weight:500;font-size:13px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+  }
+  .nyha .grade{
+    font-family:'Fraunces',serif;font-size:30px;font-weight:500;color:var(--teal-dark);
+    margin-bottom:10px;line-height:1;
+  }
+  .nyha p{font-size:14px;color:var(--ink);line-height:1.55;margin:0}
+
+  /* ---------- Table ---------- */
+  table.tbl{
+    width:100%;border-collapse:collapse;margin:16px 0;
+    font-size:14px;background:rgba(255,253,247,0.5);border-radius:12px;overflow:hidden;
+    border:1px solid var(--line);
+  }
+  table.tbl th{
+    background:var(--teal-dark);color:var(--paper);
+    text-align:left;padding:14px 16px;
+    font-family:'Manrope',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.12em;text-transform:uppercase;
+  }
+  table.tbl td{
+    padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;
+  }
+  table.tbl tr:last-child td{border-bottom:none}
+  table.tbl tr:nth-child(even) td{background:rgba(13,79,74,0.03)}
+
+  /* ---------- Mechanism steps ---------- */
+  .mech-steps{display:flex;flex-direction:column;gap:14px;margin-top:18px}
+  .mech-step{
+    display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:center;
+    padding:18px 22px;border-radius:14px;
+    background:linear-gradient(90deg, rgba(13,79,74,0.05), transparent);
+    border:1px solid var(--line);
+    transition:transform .3s ease, background .3s ease;
+  }
+  .mech-step:hover{transform:translateX(6px);background:linear-gradient(90deg, rgba(217,96,63,0.08), transparent)}
+  .mech-step .num{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    font-size:42px;color:var(--coral);line-height:1;
+  }
+  .mech-step .txt b{display:block;color:var(--teal-dark);font-size:16px;font-weight:700;margin-bottom:2px}
+  .mech-step .txt span{color:var(--muted);font-size:13px}
+  .mech-step .ar{font-size:22px;color:var(--coral);font-family:'Fraunces',serif}
+
+  /* ---------- Stage timeline ---------- */
+  .stage-track{
+    position:relative;padding:20px 0 0;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .stage-track::before{
+    content:"";position:absolute;left:0;right:0;top:36px;height:2px;
+    background:linear-gradient(90deg, var(--coral), var(--gold), var(--sage));
+  }
+  .stage{position:relative;padding-top:60px}
+  .stage .dot{
+    position:absolute;top:24px;left:0;width:26px;height:26px;border-radius:50%;
+    background:var(--paper);border:3px solid var(--coral);
+    display:grid;place-items:center;font-size:11px;font-weight:800;color:var(--coral);
+  }
+  .stage:nth-child(2) .dot{border-color:var(--gold);color:var(--gold)}
+  .stage:nth-child(3) .dot{border-color:var(--sage);color:var(--sage)}
+  .stage h4{font-family:'Fraunces',serif;font-weight:500;font-size:22px;color:var(--teal-dark);margin-bottom:8px}
+  .stage p{font-size:14px;color:var(--ink)}
+
+  /* ---------- Highlight stat ---------- */
+  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:20px 0}
+  .stat{
+    padding:20px;border-radius:14px;background:rgba(13,79,74,0.06);
+    border:1px solid var(--line);text-align:center;
+  }
+  .stat .n{font-family:'Fraunces',serif;font-size:36px;color:var(--coral);font-weight:500;line-height:1}
+  .stat .l{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+
+  /* ---------- Lochia ---------- */
+  .lochia-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+  .loch{
+    padding:20px;border-radius:14px;color:var(--paper);position:relative;overflow:hidden;
+  }
+  .loch.r{background:linear-gradient(135deg,#8b1e1e,#c0392b)}
+  .loch.s{background:linear-gradient(135deg,#8e5a3c,#b87355)}
+  .loch.a{background:linear-gradient(135deg,#5a4a3c,#7d6a58)}
+  .loch h5{font-family:'Fraunces',serif;font-weight:500;font-size:20px;margin-bottom:6px}
+  .loch p{font-size:13px;opacity:.95;line-height:1.5}
+  .loch .day{
+    position:absolute;top:10px;right:14px;font-size:11px;
+    background:rgba(255,255,255,0.25);padding:3px 10px;border-radius:100px;font-weight:600;
+  }
+
+  /* ---------- Apgar ---------- */
+  .apgar-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
+  .apgar{
+    text-align:center;padding:20px 12px;border-radius:14px;
+    background:linear-gradient(180deg, rgba(217,96,63,0.1), rgba(217,96,63,0.02));
+    border:1px solid rgba(217,96,63,0.25);
+  }
+  .apgar .lt{
+    font-family:'Fraunces',serif;font-size:46px;font-weight:600;color:var(--coral);line-height:1;
+  }
+  .apgar .nm{font-family:'Fraunces',serif;font-size:16px;color:var(--teal-dark);margin:8px 0 4px;font-weight:500}
+  .apgar .ds{font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+
+  /* ---------- Phase cards (psychological) ---------- */
+  .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+  .phase{
+    padding:24px;border-radius:14px;border:1px solid var(--line);
+    background:rgba(255,253,247,0.6);position:relative;
+  }
+  .phase .ph-num{
+    font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--coral);
+    letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+  }
+  .phase h5{
+    font-family:'Fraunces',serif;font-weight:500;font-size:22px;color:var(--teal-dark);
+    margin:6px 0 12px;
+  }
+  .phase p{font-size:14px;color:var(--ink);line-height:1.55}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--teal-dark);color:var(--paper);
+    padding:60px 8vw 40px;margin-top:80px;
+  }
+  .foot-inner{max-width:1280px;margin:0 auto}
+  .foot-inner h3{
+    font-family:'Fraunces',serif;font-weight:300;font-size:42px;line-height:1.1;
+    margin-bottom:18px;letter-spacing:-0.02em;
+  }
+  .foot-inner h3 em{font-style:italic;color:var(--coral-soft)}
+  .foot-inner p{opacity:.7;max-width:600px;font-size:14px}
+  .foot-meta{
+    margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.15);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
+    font-size:12px;opacity:.6;letter-spacing:.08em;
+  }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Pill ---------- */
+  .pill{
+    display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;padding:4px 10px;border-radius:100px;
+    background:var(--teal-dark);color:var(--paper);margin-right:6px;
+  }
+  .pill.coral{background:var(--coral)}
+  .pill.gold{background:var(--gold)}
+  .pill.sage{background:var(--sage)}
+
+  /* ---------- Quote ---------- */
+  blockquote{
+    border-left:3px solid var(--gold);
+    padding:14px 22px;margin:18px 0;
+    font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:var(--teal-dark);
+    background:rgba(200,152,85,0.06);border-radius:0 12px 12px 0;
+  }
+
+  /* mobile tweaks */
+  @media (max-width:700px){
+    .stage-track,.lochia-flow,.phase-grid,.apgar-grid,.stat-row{grid-template-columns:1fr}
+    .stat-row{grid-template-columns:repeat(2,1fr)}
+    .apgar-grid{grid-template-columns:repeat(2,1fr)}
+    .mech-step{grid-template-columns:50px 1fr;}
+    .mech-step .ar{display:none}
+    .nyha-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="bg-deco"></div>
+<div class="grain"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-deco"></div>
+  <div class="hero-inner">
+    <span class="eyebrow"><i class="fa-solid fa-stethoscope"></i> Clinical Reference · Maternal & Women's Health</span>
+    <h1 class="title">Heart, <em>Hematology</em><br>& the Journey of <em>Labour</em></h1>
+    <p class="lead">A complete clinical review spanning cardiac disease in pregnancy, iron-deficiency anemia, the stages and mechanisms of labour, postpartum adaptation, and the spectrum of gynaecological conditions encountered across a woman's lifespan.</p>
+    <div class="hero-meta">
+      <div><span class="k">Domains</span><span class="v">12 Sections</span></div>
+      <div><span class="k">Focus</span><span class="v">Obstetrics · Gynaecology</span></div>
+      <div><span class="k">Format</span><span class="v">Review & Reference</span></div>
+      <div><span class="k">Audience</span><span class="v">Nursing & Midwifery</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TOC ============ -->
+<nav class="toc">
+  <div class="toc-inner">
+    <span class="toc-label">Contents</span>
+    <a href="#s1">Cardiac Disease</a>
+    <a href="#s2">Iron-Deficiency Anemia</a>
+    <a href="#s3">Stages of Labour</a>
+    <a href="#s4">Mechanism of Labour</a>
+    <a href="#s5">Labour Management</a>
+    <a href="#s6">Labour Dysfunctions</a>
+    <a href="#s7">Postpartum Adaptation</a>
+    <a href="#s8">Apgar & PPH</a>
+    <a href="#s9">Postpartum Complications</a>
+    <a href="#s10">Menstrual Disorders</a>
+    <a href="#s11">Menopause</a>
+    <a href="#s12">Breast Conditions</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ SECTION 1 ============ -->
+  <section class="section" id="s1">
+    <div class="section-head reveal">
+      <div class="section-num">01</div>
+      <div>
+        <h2>Heart Disease in <em>Pregnancy</em></h2>
+        <div class="section-kicker">Classification · Rheumatic & Congenital · NYHA Functional Classes · Intrapartum Management</div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-heart-pulse"></i></span>Incidence & Classification</h3>
+      <p>Heart disease in pregnancy is broadly divided into two categories based on when the disease developed:</p>
+      <ul>
+        <li><b>Acquired Heart Disease:</b> Develops after birth. The classic example is rheumatic fever — now less common due to antibiotic use.</li>
+        <li><b>Congenital Heart Disease (CHD):</b> Present at birth. Currently the most common form, as more women with CHD are reaching reproductive age.</li>
+      </ul>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-virus"></i></span>Acquired — Rheumatic Heart Disease</h3>
+      <p>Now decreasing due to the widespread use of antibiotics.</p>
+      <h4>Cause</h4>
+      <ul>
+        <li>Complication of streptococcal pharyngitis ("strep throat").</li>
+        <li>Scarring of the heart valves due to rheumatic fever leads to <b>stenosis (narrowing)</b> of the heart valve openings.</li>
+      </ul>
+      <h4>Mitral Valve Stenosis — Most Common Site</h4>
+      <p>Affects blood flow from the left atrium to the left ventricle.</p>
+      <h4>Complications</h4>
+      <ul>
+        <li>Pulmonary hypertension</li>
+        <li>Pulmonary edema</li>
+        <li>Aortic regurgitation</li>
+        <li>Atrial fibrillation</li>
+        <li>Congestive heart failure (CHF)</li>
+      </ul>
+      <h4>Signs of Heart Failure</h4>
+      <ul>
+        <li>Persistent crackles at the lung bases</li>
+        <li>Dyspnea on exertion</li>
+        <li>Nocturnal cough</li>
+        <li>Hemoptysis</li>
+        <li>Progressive edema</li>
+        <li>Tachycardia, weakness, chest pain, and palpitations</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-baby"></i></span>Congenital Heart Disease in Pregnancy</h3>
+      <p>Increased risks include <b>miscarriage, cardiac complications, and premature delivery</b>, even with advances in care.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-clipboard-list"></i></span>Diagnosis & NYHA Classification System</h3>
+      <p>Developed by the New York Heart Association (NYHA) to assess the effect of activity on the heart. It is useful for determining the care needed for pregnant women with cardiac disease.</p>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> Limitation</div>
+        <div class="a">The NYHA system <b>cannot predict the risk of adverse outcomes</b> during pregnancy.</div>
+      </div>
+
+      <h4 style="margin-top:24px">BOX 10.4 — NYHA Functional Classification</h4>
+      <div class="nyha-grid">
+        <div class="nyha c1">
+          <div class="cls">Class I</div>
+          <div class="grade">Uncompromised</div>
+          <p>No limitation of physical activity. Asymptomatic with ordinary activity.</p>
+        </div>
+        <div class="nyha c2">
+          <div class="cls">Class II</div>
+          <div class="grade">Slightly Compromised</div>
+          <p>Requiring slight limitation of physical activity. Comfortable at rest, but ordinary physical activity causes fatigue, dyspnea, palpitations, or anginal pain.</p>
+        </div>
+        <div class="nyha c3">
+          <div class="cls">Class III</div>
+          <div class="grade">Marked Limitation</div>
+          <p>Comfortable at rest, but less than ordinary activity causes excessive fatigue, palpitation, dyspnea, or anginal pain. Markedly compromised.</p>
+        </div>
+        <div class="nyha c4">
+          <div class="cls">Class IV</div>
+          <div class="grade">Inability to Perform</div>
+          <p>Cannot perform any physical activity without discomfort. Symptoms of cardiac insufficiency even at rest.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-chalkboard-user"></i></span>Education for Mothers — NYHA Class I & II</h3>
+      <p>Women in NYHA Class I or II generally tolerate pregnancy well with appropriate management.</p>
+      <h4>1. Limit Physical Activity</h4>
+      <ul>
+        <li>Individualized to the patient's tolerance.</li>
+        <li>Activity should not exceed the heart's functional capacity.</li>
+        <li><b>Goal:</b> Remain symptom-free of cardiac stress (no dyspnea, chest pain, or tachycardia).</li>
+      </ul>
+      <h4>2. Avoid Excessive Weight Gain</h4>
+      <ul>
+        <li>Excess weight increases heart demands.</li>
+        <li><b>Diet:</b> Adequate in protein, calories, and sodium.</li>
+        <li>Low-sodium diet may be advised to prevent congestive heart failure (CHF).</li>
+      </ul>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-syringe"></i></span>Drug Therapy — Anticoagulants & Heart Failure Medications</h3>
+      <h4>Heparin (S/C or IV)</h4>
+      <ul>
+        <li>Does <b>not</b> cross the placenta; effective alternative for warfarin.</li>
+        <li>Requires monitoring of <b>PTT, aPTT, and platelet count</b>.</li>
+        <li>Withheld during labor; resumed <b>6 hours after vaginal birth</b> and <b>6–12 hours after cesarean</b>.</li>
+      </ul>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-teal reveal">
+        <h3><span class="ic"><i class="fa-solid fa-droplet"></i></span>Intrapartum Management</h3>
+        <h4>Minimizing Cardiovascular Stress</h4>
+        <ul>
+          <li><b>IV Fluid Management:</b> Careful administration to prevent fluid overload.</li>
+          <li><b>Positioning:</b> Side-lying position with head and shoulders elevated.</li>
+        </ul>
+      </div>
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-triangle-exclamation"></i></span>Risk of Circulatory Overload</h3>
+        <p><b>Cardiac Decompensation / Circulatory Overload</b> occurs due to:</p>
+        <ul>
+          <li>Relief of vena caval compression</li>
+          <li>Autotransfusion of blood from the uterus</li>
+        </ul>
+        <p style="margin-top:10px"><b>Monitor for:</b> bounding pulse, distended neck and peripheral veins, and moist crackles in the lung.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 ============ -->
+  <section class="section" id="s2">
+    <div class="section-head reveal">
+      <div class="section-num">02</div>
+      <div>
+        <h2>Iron-Deficiency <em>Anemia</em></h2>
+        <div class="section-kicker">Maternal risks · Therapeutic & nursing management · Parenteral therapy · Blood transfusion</div>
+      </div>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-droplet"></i></span>Causes & Prevalence</h3>
+      <p>Iron-deficiency anemia is the most common nutritional deficiency in pregnancy. Its clinical consequences and symptoms span maternal and fetal outcomes.</p>
+      <h4>Maternal Risks</h4>
+      <ul>
+        <li>Preterm delivery</li>
+        <li>Perinatal mortality</li>
+        <li>Postpartum depression</li>
+        <li>Increased risk of hemorrhage</li>
+        <li>Increased risk of infection</li>
+      </ul>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> What is the maternal risk factor with iron deficiency?</div>
+        <div class="a">Preterm delivery, perinatal mortality, postpartum depression, increased risk of hemorrhage, and infection.</div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-bullseye"></i></span>Therapeutic Management — Goals of Treatment</h3>
+      <div class="stat-row">
+        <div class="stat"><div class="n">1</div><div class="l">Eliminate symptoms</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">Correct deficiency</div></div>
+        <div class="stat"><div class="n">3</div><div class="l">Replenish stores</div></div>
+        <div class="stat"><div class="n">3×</div><div class="l">Hb checks (1st, 30w, 36w)</div></div>
+      </div>
+      <p>Hemoglobin level should be estimated at the <b>first antenatal visit, at the 30th week, and finally at the 36th week</b>.</p>
+      <h4>Routine Supplementation</h4>
+      <ul>
+        <li>Routine iron supplementation for all pregnant women <b>after the patient becomes free from the nausea of pregnancy</b>.</li>
+        <li>Start with a low dose of <b>30 mg/day</b>.</li>
+        <li>Daily administration of <b>200 mg ferrous sulfate</b> (containing 60 mg elemental iron) along with <b>1 mg folic acid</b> is a quite effective prophylactic procedure.</li>
+        <li><b>Tea should be avoided within 1 hour</b> of taking iron tablets.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-pills"></i></span>Nursing Management — Medication Instructions</h3>
+      <h4>Iron Supplementation</h4>
+      <ul>
+        <li><b>Taking with Vitamin C:</b> Encourage intake with vitamin C-containing fluids (e.g., orange juice) to promote absorption.</li>
+        <li><b>Avoiding Milk:</b> Milk can inhibit iron absorption; avoid taking iron supplements with milk.</li>
+        <li><b>Empty Stomach vs. Meals:</b> Best absorbed on an empty stomach, but if gastrointestinal discomfort occurs, take with meals.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-triangle-exclamation"></i></span>Complications of Anemia in Pregnancy — Puerperium</h3>
+      <p>There is an increased chance of:</p>
+      <ul>
+        <li>Puerperal sepsis</li>
+        <li>Subinvolution</li>
+        <li>Poor lactation</li>
+        <li>Puerperal venous thrombosis</li>
+        <li>Pulmonary embolism</li>
+      </ul>
+    </div>
+
+    <div class="grid-2">
+      <div class="card reveal">
+        <h3><span class="ic"><i class="fa-solid fa-notes-medical"></i></span>Parenteral Therapy</h3>
+        <ul>
+          <li><b>Intravenous route:</b> risk of anaphylactic reaction.</li>
+          <li><b>Intramuscular route</b> also available.</li>
+        </ul>
+        <h4>Indications</h4>
+        <ul>
+          <li>Contraindications of oral therapy.</li>
+          <li>The patient is not cooperative to take oral iron.</li>
+          <li>Cases seen for the first time during the last 8–10 weeks with severe anemia.</li>
+        </ul>
+        <p style="margin-top:10px"><b>Main advantage:</b> certainty of its administration.</p>
+        <p><b>Expected rise in Hb:</b> 0.7 to 1 g/100 ml/week after parenteral therapy.</p>
+      </div>
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-hand-holding-medical"></i></span>Place of Blood Transfusion</h3>
+        <p>The indication of blood transfusion in anemia during pregnancy is very much limited.</p>
+        <h4>Indications</h4>
+        <ul>
+          <li><b>1.</b> To correct anemia due to blood loss and to combat postpartum hemorrhage.</li>
+          <li><b>2.</b> Patient with severe anemia (less than 7 g/dl) seen in later months of pregnancy (beyond 36 weeks). The primary concern is not only to correct anemia but also to make the patient fit to withstand the strain of labor and blood loss following delivery.</li>
+          <li><b>3.</b> Refractory anemia: anemia not responding to either oral or parenteral therapy despite correct typing.</li>
+          <li><b>4.</b> Associated infection.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 ============ -->
+  <section class="section" id="s3">
+    <div class="section-head reveal">
+      <div class="section-num">03</div>
+      <div>
+        <h2>Stages of <em>Labour</em></h2>
+        <div class="section-kicker">Three stages · Phases · Physiology · Effacement · Contractions · Fundal dominance</div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-clock-rotate-left"></i></span>Overview — Three Stages of Labour</h3>
+      <p>Labour consists of three stages: 1st, 2nd, and 3rd.</p>
+      <ul>
+        <li>The first stage of labour is usually recognized by the onset of regular uterine contraction, an accompanying effacement, and at least 4 cm of dilatation of the cervix, finally culminating in full dilatation of the cervix.</li>
+      </ul>
+      <h4>Phases of Labour</h4>
+      <div class="stage-track">
+        <div class="stage">
+          <div class="dot">1</div>
+          <h4>Latent Phase</h4>
+          <p>6–8 hours for primigravida. Cervical canal shortens from 3 cm long to &lt;0.5 cm.</p>
+        </div>
+        <div class="stage">
+          <div class="dot">2</div>
+          <h4>Active Phase</h4>
+          <p>Begins when cervix is at least 4 cm dilated; progressively dilates to 10 cm (full dilatation) in presence of rhythmic contractions.</p>
+        </div>
+        <div class="stage">
+          <div class="dot">3</div>
+          <h4>Transitional Phase</h4>
+          <p>From ~8 cm dilated until fully dilated or until expulsive contractions are felt. Many women feel the urge to push during transition.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-magnifying-glass-chart"></i></span>Physiology of the First Stage</h3>
+      <p>The greatest part of labour is taken up by the first stage, and it is common to expect the active phase to be completed within <b>6–12 hours</b>.</p>
+      <ul>
+        <li><b>Cervical dilatation:</b> 0.5–1 cm per hour, probably.</li>
+        <li>Dilatation of the cervix is the process of enlargement of the os uteri from a tightly closed aperture to an opening large enough to permit passage of the fetus.</li>
+      </ul>
+      <h4>How to Assess Dilatation</h4>
+      <p>Dilatation is assessed in centimetres, and full dilatation at term equates to about <b>10 cm</b>. However, acknowledging that all women are different sizes and shapes means that full cervical dilatation may be between <b>9 and 11 cm</b> in individual women.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-gold reveal">
+        <h3><span class="ic"><i class="fa-solid fa-arrows-up-down"></i></span>Effacement</h3>
+        <p>Effacement refers to the inclusion (taking up) of the cervical canal into the lower uterine segment.</p>
+        <p>It is believed that this process takes place from above downward, meaning that the muscle fibers are drawn upward.</p>
+      </div>
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-wave-square"></i></span>Uterine Contraction</h3>
+        <ul>
+          <li>Before labour becomes established, contractions may occur every 15–20 minutes, lasting about 30 seconds (weak, imperceptible to the woman).</li>
+          <li>Contractions usually occur with rhythmic regularity; intervals where the muscle relaxes (resting tone) gradually lessen.</li>
+          <li>By the end of the first stage, contractions may occur at 2–3 minute intervals, last for 50–60 seconds, and are very powerful.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-arrows-down-to-line"></i></span>Fundal Dominance</h3>
+      <ul>
+        <li>Each uterine contraction commences in the fundus near one of the cornua and spreads across and downwards.</li>
+        <li>The contraction lasts longest in the fundus, where it is also most intense.</li>
+        <li>Peak reaches simultaneously over the whole uterus, and the contraction fades from all parts together.</li>
+        <li>This pattern permits the cervix to dilate and the strongly contracting fundus to eventually expel the fetus at the end of labour.</li>
+      </ul>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-gauge-high"></i></span>Intensity and Resting Tone</h3>
+      <ul>
+        <li>Before labour becomes established, uterine contractions may occur every 15–20 minutes, lasting about 30 seconds (weak contractions so imperceptible to the woman).</li>
+        <li>The contractions usually occur with rhythmic regularity, and the intervals between them where the muscle relaxes (resting tone) gradually lessen.</li>
+        <li>At the same time, the length and strength gradually intensify through the latent phase and into the active phase of the first stage of labor.</li>
+        <li>By the end of the first stage, the contractions may occur at 2–3 minute intervals, last for 50–60 seconds, and are very powerful.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 ============ -->
+  <section class="section" id="s4">
+    <div class="section-head reveal">
+      <div class="section-num">04</div>
+      <div>
+        <h2>Mechanism of <em>Labour</em></h2>
+        <div class="section-kicker">The seven cardinal movements of the fetus through the birth canal</div>
+      </div>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-list-ol"></i></span>The Seven Cardinal Movements</h3>
+      <div class="mech-steps">
+        <div class="mech-step"><div class="num">1</div><div class="txt"><b>Descent</b><span>نزول الرأس — Downward movement of the fetal head</span></div><div class="ar">↓</div></div>
+        <div class="mech-step"><div class="num">2</div><div class="txt"><b>Flexion</b><span>انثناء الرأس (الذقن على الصدر) — Chin to chest</span></div><div class="ar">↓</div></div>
+        <div class="mech-step"><div class="num">3</div><div class="txt"><b>Internal Rotation</b><span>دوران الرأس للاتجاه المناسب — Head rotates to optimal position</span></div><div class="ar">↓</div></div>
+        <div class="mech-step"><div class="num">4</div><div class="txt"><b>Extension</b><span>خروج الرأس — Head emerges</span></div><div class="ar">↓</div></div>
+        <div class="mech-step"><div class="num">5</div><div class="txt"><b>Restitution</b><span>رجوع الرأس لوضعه الطبيعي — Head returns to natural position</span></div><div class="ar">↓</div></div>
+        <div class="mech-step"><div class="num">6</div><div class="txt"><b>Internal Rotation of Shoulders</b><span>دوران الكتفين — Shoulders rotate</span></div><div class="ar">↓</div></div>
+        <div class="mech-step"><div class="num">7</div><div class="txt"><b>Lateral Flexion (Expulsion)</b><span>خروج الكتفين ثم باقي الجسم — Shoulders and body emerge</span></div><div class="ar">✓</div></div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-hourglass-end"></i></span>Third Stage of Labour</h3>
+      <p>The third stage can be defined as the period from the <b>birth of the baby to complete expulsion of the placenta and membranes</b>.</p>
+      <p>The third stage usually lasts between <b>5 and 15 minutes</b>, but any period up to <b>1 hour</b> may be considered normal.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 5 ============ -->
+  <section class="section" id="s5">
+    <div class="section-head reveal">
+      <div class="section-num">05</div>
+      <div>
+        <h2>Management of <em>Labour</em></h2>
+        <div class="section-kicker">First stage assessment · Fetal wellbeing · Second stage · Episiotomy · Active third stage · Placental separation</div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-clipboard-user"></i></span>Management — First Stage</h3>
+      <h4>General Assessment</h4>
+      <ul>
+        <li><b>Fetal heart rate</b> should be auscultated for a minimum of 1 minute immediately after a contraction using a Pinard or Doppler.</li>
+        <li><b>Vaginal examination (VE)</b> may be undertaken to help confirm onset of labour and determine the extent of cervical effacement and dilatation (every 4 hours).</li>
+        <li><b>Bladder care:</b> Frequent bladder emptying during labour is recommended (every 4 hours). Reasonable to consider that the bladder should be emptied at least 4-hourly, or more frequently if palpable abdominally.</li>
+      </ul>
+      <h4>Assessing Well-being of the Fetus</h4>
+      <p>During the first stage of labour, auscultation should take place <b>every 15 minutes</b> for a minimum of <b>60 seconds</b> immediately following a contraction.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-baby-carriage"></i></span>Second Stage Management</h3>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> How long to delay cord clamping?</div>
+        <div class="a">Cord clamping delayed to <b>1–3 minutes</b>; baby placed on mother's chest or abdomen for skin-to-skin contact.</div>
+      </div>
+      <p>Maternal pulse rate is usually taken and recorded <b>every 15 minutes</b>, and blood pressure <b>every hour</b>.</p>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-scissors"></i></span>Episiotomy</h3>
+      <p>A surgical operation where an incision is made in the perineum to extend the vulval orifice.</p>
+      <ul>
+        <li>Suturing of an episiotomy should only be undertaken by a practitioner with skills in this technique.</li>
+        <li>If observation indicates that the episiotomy has extended to the anal sphincter, specialized management is required.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-bolt"></i></span>Active Management of the Third Stage</h3>
+      <ul>
+        <li>Includes the routine use of oxytocin — prophylactic administration of a uterotonic agent (oxytocin) aimed at reducing the risk of postpartum haemorrhage.</li>
+        <li>Usually with clamping of the umbilical cord shortly after birth of the baby and delivery of the placenta by the use of <b>controlled cord traction (CCT)</b>.</li>
+        <li><b>Controlled cord traction should NEVER be used in the absence of a well-contracted uterus</b> following uterotonic administration.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-circle-check"></i></span>Signs of Placental Separation</h3>
+      <ol style="padding-left:20px;line-height:1.9">
+        <li>A large <b>"gush" of blood</b> may follow, indicating partial or complete separation of the placenta. It usually ceases after 10–20.</li>
+        <li>The woman may wriggle, change position, or complain of <b>pressure or pain in her lower back or bottom</b>.</li>
+        <li>The cord may lengthen and/or the walls of the vulva may bulge as the placenta descends.</li>
+        <li>The uterus becomes <b>hard, round and mobile</b>.</li>
+      </ol>
+    </div>
+
+    <div class="grid-2">
+      <div class="card reveal">
+        <h3><span class="ic"><i class="fa-solid fa-hand"></i></span>External Uterine Massage</h3>
+        <p>Following placental expulsion, uterine massage is a component of active management of the third stage of labor that is recommended by both <b>ICM and FIGO</b>.</p>
+      </div>
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-stopwatch"></i></span>Immediate Postpartum Care</h3>
+        <p>Check vital signs:</p>
+        <ul>
+          <li>Every <b>15 min</b> during the 1st hour</li>
+          <li>Then every <b>30 min</b> during the 2nd hour</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 6 ============ -->
+  <section class="section" id="s6">
+    <div class="section-head reveal">
+      <div class="section-num">06</div>
+      <div>
+        <h2>Labour <em>Dysfunctions</em> & Malpositions</h2>
+        <div class="section-kicker">Hypertonic · Hypotonic · Precipitous · Occiput Posterior · Face/Brow · Breech · Shoulder Dystocia</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-bolt"></i></span>Hypertonic Uterine Dysfunction</h3>
+        <p>Occurs when the uterus <b>never fully relaxes between contractions</b>. Contractions are irregular and poorly coordinated because more than one uterine pacemaker is sending signals for contraction.</p>
+        <div class="qa">
+          <div class="q"><i class="fa-solid fa-circle-question"></i> When does it occur?</div>
+          <div class="a">In the <b>latent phase</b> of the first stage of labor (cervical dilation &lt;4 cm); uncoordinated.</div>
+        </div>
+      </div>
+      <div class="card tinted-teal reveal">
+        <h3><span class="ic"><i class="fa-solid fa-battery-low"></i></span>Hypotonic Uterine Dysfunction</h3>
+        <p>Occurs during <b>active labor</b> (dilation more than 4 cm) when contractions become poor in quality and lack sufficient intensity to dilate and efface the cervix.</p>
+        <p>The major risk with this complication is <b>hemorrhage after giving birth</b> because the uterus cannot contract effectively to compress blood vessels.</p>
+        <div class="qa">
+          <div class="q"><i class="fa-solid fa-circle-question"></i> When does it occur?</div>
+          <div class="a">During <b>active labor</b> (dilation &gt; 4 cm).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-gauge"></i></span>Precipitous Labour</h3>
+      <ul>
+        <li>One that is completed in <b>less than 3 hours</b>.</li>
+        <li>Women have soft perineal tissues that stretch readily, permitting the fetus to pass through the pelvis quickly and easily.</li>
+        <li>Maternal complications are rare if the maternal pelvis is adequate.</li>
+        <li><b>Potential fetal complications:</b> head trauma such as intracranial hemorrhage or nerve damage, and hypoxia due to the rapid progression of labor.</li>
+        <li>Abrupt onset of higher-intensity contractions occurring in a shorter period of time instead of the more gradual increase in frequency, duration, and intensity that typifies most spontaneous labors.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-arrows-rotate"></i></span>Persistent Occiput Posterior</h3>
+      <ul>
+        <li>The <b>most common malposition</b>.</li>
+        <li>Reasons for this malposition are often unclear.</li>
+        <li>Presents slightly larger diameters to the maternal pelvis, thus slowing fetal descent.</li>
+        <li>A fetal head that is poorly flexed may be responsible.</li>
+        <li>Poor uterine contractions may not push the fetal head down into the pelvic floor to the extent.</li>
+        <li>Engagement of fetal head in the left or right occipito-transverse position with the occiput rotating posteriorly (fetus born facing upward instead of the normal downward position).</li>
+        <li>Labor usually much longer and more uncomfortable (causing increased back pain during labor).</li>
+        <li>Possible extensive caput succedaneum and molding from the sustained occiput posterior position.</li>
+      </ul>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> What is Persistent Occiput Posterior?</div>
+        <div class="a">The most common malposition where the fetal occiput rotates posteriorly — fetus is born facing upward instead of the normal downward position. Often causes prolonged, painful labor with significant back pain.</div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-face-smile"></i></span>Face and Brow Presentations</h3>
+      <h4>Diagnosis</h4>
+      <p>Only once labor is well established via vaginal examination; palpation of facial features as the presenting part rather than the fetal head.</p>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> In Face and Brow Presentation, performing vaginal examination — what do you feel?</div>
+        <div class="a">Palpation of <b>facial features</b> (nose, mouth, orbital ridges) as the presenting part rather than the normal fetal head landmarks.</div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-arrows-down-to-line"></i></span>Breech Presentations — Therapeutic Management</h3>
+      <p>Use of <b>external cephalic version</b> to reduce the chance of breech presentation at birth; attempted after the <b>36th week of gestation but before the start of labor</b> (some fetuses spontaneously turn to a cephalic presentation on their own toward term, and some will return to the breech presentation if external cephalic version is attempted too early), with risk for fractured bones, hemorrhage, and umbilical cord entanglement.</p>
+      <p><b>Tocolytic drugs</b> to relax the uterus, as well as other methods, to facilitate external cephalic version at term.</p>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> What are Tocolytic drugs?</div>
+        <div class="a">Medications used to <b>relax the uterus</b> (suppress uterine contractions), facilitating external cephalic version at term.</div>
+      </div>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> What is External Cephalic Version?</div>
+        <div class="a">A maneuver performed after 36 weeks (before labor) where the practitioner externally manipulates the fetus through the maternal abdomen to convert a breech presentation to a cephalic (head-down) presentation.</div>
+      </div>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-hands"></i></span>Shoulder Dystocia — McRobert's Maneuver</h3>
+      <p><b>Hyperflexion and abduction of maternal hips onto the abdomen</b> to increase pelvic diameter.</p>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> What is McRobert's maneuver and why use it?</div>
+        <div class="a">An emergency maneuver for shoulder dystocia — hyperflexing and abducting the maternal hips onto the abdomen to <b>increase pelvic diameter</b>, freeing the impacted anterior shoulder.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 7 ============ -->
+  <section class="section" id="s7">
+    <div class="section-head reveal">
+      <div class="section-num">07</div>
+      <div>
+        <h2>Postpartum <em>Adaptation</em></h2>
+        <div class="section-kicker">Puerperium · Lochia · Cervix · Perineum · Coagulation · Endocrine · Psychological phases · Uterine involution</div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-hourglass-start"></i></span>Puerperium Period</h3>
+      <p>Begins after the delivery of the placenta and lasts approximately <b>6 weeks</b>.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-droplet"></i></span>Lochia — Vaginal Discharge After Birth</h3>
+      <p>Lochia passes through three stages:</p>
+      <div class="lochia-flow">
+        <div class="loch r"><span class="day">Day 1–4</span><h5>Lochia Rubra</h5><p>Deep-red mixture of mucus, tissue debris, and blood occurring for the first 3–4 days after birth. As uterine bleeding subsides, it becomes paler and more serous.</p></div>
+        <div class="loch s"><span class="day">Day 3–10</span><h5>Lochia Serosa</h5><p>Second stage. Pinkish brown, expelled 3–10 days postpartum. Primarily contains leukocytes, decidual tissue, red blood cells, and serous fluid.</p></div>
+        <div class="loch a"><span class="day">Day 10–6wk</span><h5>Lochia Alba</h5><p>Final stage. Creamy white or light brown; consists of leukocytes, decidual tissue, and reduced fluid content. Occurs days 10–14 but can last 3–6 weeks postpartum in some women and still be considered normal.</p></div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-circle-dot"></i></span>Cervix</h3>
+        <ul>
+          <li>The cervical os gradually closes and returns to normal by <b>2 weeks</b>, whereas the external os widens and never appears the same after childbirth.</li>
+          <li>The external cervical os is no longer shaped like a circle, but instead appears as a <b>jagged slit-like opening</b>, often described as a <b>"fish mouth"</b>.</li>
+        </ul>
+        <div class="qa">
+          <div class="q"><i class="fa-solid fa-circle-question"></i> How does the cervix look after delivery?</div>
+          <div class="a">The external os appears as a jagged, slit-like opening — described as a <b>"fish mouth"</b> — instead of the previous circular shape.</div>
+        </div>
+      </div>
+      <div class="card tinted-gold reveal">
+        <h3><span class="ic"><i class="fa-solid fa-band-aid"></i></span>Perineum</h3>
+        <ul>
+          <li>Often edematous and bruised for the first day or two after birth.</li>
+          <li>If the birth involved an episiotomy or laceration, complete healing may take as long as <b>4 to 6 months</b> in the absence of complications at the site, such as hematoma or infection.</li>
+          <li>Presence of swollen hemorrhoids may also heighten discomfort.</li>
+          <li><b>Local comfort measures:</b> ice packs, pouring warm water over the area via a peribottle to relieve pain.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-shield-virus"></i></span>Coagulation</h3>
+      <p>This <b>hypercoagulable state</b>, combined with vessel damage during birth and immobility, places the woman at risk for <b>thromboembolism</b> (blood clots) in the lower extremities and the lung.</p>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> Why educate the woman for early ambulation?</div>
+        <div class="a">Because the hypercoagulable state combined with vessel damage and immobility places her at risk for thromboembolism — early ambulation promotes circulation and prevents clot formation.</div>
+      </div>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-bladder"></i></span>Urinary Considerations</h3>
+      <p>Difficulty voiding can lead to <b>urinary retention, bladder distention, and ultimately urinary tract infection (UTI)</b>.</p>
+      <ul>
+        <li>Urinary retention and bladder distention can cause displacement of the uterus from the midline to the right and can inhibit the uterus from contracting properly, which increases the risk of postpartum hemorrhage.</li>
+        <li>Urinary retention is a <b>major cause of uterine atony</b>, which allows excessive bleeding.</li>
+      </ul>
+    </div>
+
+    <div class="card reveal">
+      <h3><span class="ic"><i class="fa-solid fa-flask-vial"></i></span>Endocrine System Adaptations</h3>
+      <ul>
+        <li>Levels of circulating estrogen and progesterone drop quickly with delivery of the placenta.</li>
+        <li>Decreased estrogen levels are associated with breast engorgement and with the diuresis of excess extracellular fluid accumulated during pregnancy.</li>
+        <li>Estrogen is at its lowest level a week after birth. For the woman who is not breastfeeding, estrogen levels begin to increase by 2 weeks after birth.</li>
+      </ul>
+      <h4>Prolactin & Lactation</h4>
+      <ul>
+        <li>Prolactin from the anterior pituitary gland, secreted in increasing levels throughout pregnancy, triggers the synthesis and secretion of milk after the woman gives birth.</li>
+        <li>During pregnancy, prolactin, estrogen, and progesterone cause synthesis and secretion of <b>colostrum</b>, which contains protein and carbohydrate but no milk fat.</li>
+      </ul>
+      <h4>Engorgement</h4>
+      <p>Engorgement is the process of swelling of the breast tissue as a result of an increase in blood and lymph supply as a precursor to lactation.</p>
+      <ul>
+        <li>Between feedings, applying <b>cold compresses</b> to the breasts helps reduce swelling.</li>
+        <li>To maintain milk supply, the breasts need to be stimulated by a nursing infant, a breast pump, or manual expression of the milk.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-brain"></i></span>Psychological Adaptations</h3>
+      <div class="phase-grid">
+        <div class="phase">
+          <div class="ph-num">Phase 01</div>
+          <h5>Taking-In</h5>
+          <p>The time immediately after birth when the client needs sleep, depends on others to meet her needs, and relives the events surrounding the birth process.</p>
+        </div>
+        <div class="phase">
+          <div class="ph-num">Phase 02</div>
+          <h5>Taking-Hold</h5>
+          <p>Characterized by dependent and independent maternal behavior. Typically starts on the second to third day postpartum and may last several weeks.</p>
+        </div>
+        <div class="phase">
+          <div class="ph-num">Phase 03</div>
+          <h5>Letting-Go</h5>
+          <p>The woman reestablishes relationships with other people. Adapts to parenthood through her new role as a mother. Assumes responsibility and care for the newborn with more confidence.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-hand-holding-medical"></i></span>Uterus — Fundal Assessment</h3>
+      <ul>
+        <li>By approximately one hour post delivery, the fundus is <b>firm and at the level of the umbilicus</b>.</li>
+        <li>Assess patients for uterine cramping and treat for pain as needed.</li>
+        <li>Assess the firmness of the fundus and provide massage in the event of a boggy uterus or excessive bleeding.</li>
+        <li>Encourage woman to void before palpation of the uterine fundus because a full bladder displaces the uterus and can lead to excessive bleeding.</li>
+        <li><b>Fundus goes down daily 1 cm per day.</b></li>
+      </ul>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> Why perform fundus massage? What is its purpose?</div>
+        <div class="a">To stimulate uterine contraction and prevent/treat <b>uterine atony</b> — a boggy uterus cannot compress blood vessels effectively, leading to hemorrhage. Massage promotes firm contraction and controls bleeding.</div>
+      </div>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> How many cm does the fundus go down daily?</div>
+        <div class="a"><b>1 cm per day</b>.</div>
+      </div>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-magnifying-glass"></i></span>Lochia — Assessment</h3>
+      <ul>
+        <li>Saturating <b>one pad in less than an hour</b>, a constant trickle of lochia, or the presence of <b>large blood clots</b> is indicative of more serious complications (e.g., retained placenta fragments, hemorrhage) and should be investigated immediately.</li>
+        <li>A significant amount of lochia despite a firm fundus may indicate a <b>laceration in the birth canal</b>.</li>
+        <li><b>Foul-smelling lochia</b> typically indicates infection and needs to be managed as soon as possible.</li>
+      </ul>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> How to assess lochia?</div>
+        <div class="a">Check pad saturation (1 pad/&lt;1 hr is abnormal), presence of clots, color and odor, and consistency with fundal firmness. Foul smell → infection; heavy lochia with firm fundus → laceration.</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-gold reveal">
+        <h3><span class="ic"><i class="fa-solid fa-ice-pack"></i></span>Episiotomy / Perineum</h3>
+        <p>Excessive edema can delay wound healing.</p>
+        <p>The use of <b>ice packs</b> during the immediate postpartum period is generally indicated.</p>
+        <div class="qa">
+          <div class="q"><i class="fa-solid fa-circle-question"></i> How to manage perineum edema?</div>
+          <div class="a">Ice packs during the immediate postpartum period; peribottle with warm water; avoid prolonged sitting; assess for hematoma/infection.</div>
+        </div>
+      </div>
+      <div class="card tinted-teal reveal">
+        <h3><span class="ic"><i class="fa-solid fa-shoe-prints"></i></span>Lower Extremities</h3>
+        <p>To improve circulation and prevent the development of thrombi:</p>
+        <ul>
+          <li>Encourage women to <b>ambulate shortly after delivery</b>.</li>
+          <li>Teach them to <b>avoid crossing the legs</b> for long periods of time.</li>
+          <li>Keep the legs <b>elevated while sitting</b>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 8 ============ -->
+  <section class="section" id="s8">
+    <div class="section-head reveal">
+      <div class="section-num">08</div>
+      <div>
+        <h2>Apgar & <em>Postpartum Haemorrhage</em></h2>
+        <div class="section-kicker">Newborn assessment · Definition of PPH · Uterine atony intervention</div>
+      </div>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-baby"></i></span>Apgar Scoring</h3>
+      <p>Used worldwide to evaluate a newborn's physical condition at <b>1 minute and 5 minutes</b> after birth. An additional Apgar assessment is done at <b>10 minutes</b> if the 5-minute score is less than 7 points.</p>
+      <ul>
+        <li>It can be used as a rapid method for assessing the survival of a neonate.</li>
+        <li>Assessment at <b>1 minute</b> provides data about the newborn's initial adaptation to extrauterine life.</li>
+        <li>Assessment at <b>5 minutes</b> provides a clearer indication of the newborn's overall central nervous system status.</li>
+      </ul>
+      <h4>The Five Parameters</h4>
+      <div class="apgar-grid">
+        <div class="apgar"><div class="lt">A</div><div class="nm">Appearance</div><div class="ds">Color</div></div>
+        <div class="apgar"><div class="lt">P</div><div class="nm">Pulse</div><div class="ds">Heart Rate</div></div>
+        <div class="apgar"><div class="lt">G</div><div class="nm">Grimace</div><div class="ds">Reflex Irritability</div></div>
+        <div class="apgar"><div class="lt">A</div><div class="nm">Activity</div><div class="ds">Muscle Tone</div></div>
+        <div class="apgar"><div class="lt">R</div><div class="nm">Respiratory</div><div class="ds">Respiratory Effort</div></div>
+      </div>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> When is the Apgar score affected?</div>
+        <div class="a">It is influenced by the presence of <b>infection, newborn maturity, mother's age, congenital anomalies, physiologic immaturity, maternal sedation via medications, labor management, and neuromuscular disorders</b>.</div>
+      </div>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-droplet"></i></span>Postpartum Haemorrhage (PPH)</h3>
+      <ul>
+        <li>PPH is defined as a blood loss <b>greater than 500 mL after vaginal birth</b> or <b>more than 1,000 mL after a cesarean birth</b>.</li>
+        <li>A major obstetric haemorrhage is defined as a blood loss of <b>more than 1,500 to 2,500 mL</b> or bleeding that required <b>more than 5 units of transfused blood</b>.</li>
+        <li>Blood loss that occurs <b>within 24 hours of birth</b> is termed <b>primary (immediate or early)</b> postpartum haemorrhage.</li>
+        <li>Blood loss that occurs <b>24 hours to 12 weeks after birth</b> is termed <b>delayed (late)</b> postpartum haemorrhage.</li>
+      </ul>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> Definition of PPH?</div>
+        <div class="a">Blood loss &gt;500 mL after vaginal birth or &gt;1,000 mL after cesarean birth. Major obstetric haemorrhage = &gt;1,500–2,500 mL or &gt;5 units transfused blood.</div>
+      </div>
+      <h4>Remember — PPH Cause & Intervention</h4>
+      <blockquote>Uterine atony → massage and oxytocics.</blockquote>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> What to do if uterine atony occurs?</div>
+        <div class="a"><b>Massage the fundus</b> and administer <b>oxytocics</b> (uterotonic agents). Ensure bladder is empty; initiate bimanual compression if needed; prepare for further interventions if bleeding persists.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 9 ============ -->
+  <section class="section" id="s9">
+    <div class="section-head reveal">
+      <div class="section-num">09</div>
+      <div>
+        <h2>Postpartum <em>Complications</em></h2>
+        <div class="section-kicker">Thromboembolism · Infection · Blues · Depression · Psychosis</div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-shield-heart"></i></span>Venous Thromboembolic Conditions — Nursing Management</h3>
+      <ol style="padding-left:22px;line-height:1.95">
+        <li><b>Preventing venous stasis</b> by encouraging activity that causes leg muscles to contract and promotes venous return (leg exercises and walking).</li>
+        <li><b>Dorsi/plantar flexion of feet</b> with prolonged sitting to promote venous return.</li>
+        <li>Using <b>intermittent sequential compression devices</b> to produce passive leg muscle contractions until the woman is ambulatory.</li>
+        <li><b>Elevating the woman's legs above her heart level</b> to promote venous return.</li>
+        <li><b>Stopping smoking</b> to reduce or prevent vascular vasoconstriction.</li>
+        <li><b>Applying compression stockings</b> and removing them daily for inspection of skin.</li>
+      </ol>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-temperature-high"></i></span>Postpartum Infection</h3>
+      <p>Postpartum infection is defined as a <b>fever of 38°C or higher</b> after the first 24 hours after childbirth, occurring on <b>at least 2 of the first 10 days</b> after birth, exclusive of the first 24 hours.</p>
+      <p>There is a higher occurrence in <b>cesarean births</b> than in vaginal births.</p>
+      <h4>Causes</h4>
+      <ul>
+        <li>Infection of the episiotomy site</li>
+        <li>Infection of the incision site with cesarian section</li>
+        <li>Mastitis</li>
+      </ul>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-gold reveal">
+        <h3><span class="ic"><i class="fa-solid fa-cloud-rain"></i></span>Postpartum Blues</h3>
+        <p>Many postpartum women (approximately <b>80%</b>) experience the "blues".</p>
+        <p>The woman exhibits mild depressive symptoms of <b>anxiety, irritability, mood swings, tearfulness, increased sensitivity, despondency, feelings of being overwhelmed, difficulty thinking clearly, and fatigue</b>.</p>
+      </div>
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-heart-crack"></i></span>Postpartum Depression (PPD)</h3>
+        <p>A form of clinical depression that can affect women, and less frequently men, after childbirth.</p>
+        <p>Unlike the postpartum blues, women with PPD feel worse over time, and changes in mood and behavior do not go away on their own.</p>
+        <h4>Signs & Symptoms</h4>
+        <ul>
+          <li>Restless · Guilty · Moody · Overwhelmed</li>
+          <li>Low energy level · Worthless · Hopeless</li>
+          <li>Sad · Loss of enjoyment · Loss of libido</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-triangle-exclamation"></i></span>Postpartum Psychosis</h3>
+      <p>An <b>emergency psychiatric condition</b> that can result in a significant increased risk for <b>suicide and infanticide</b>.</p>
+      <ul>
+        <li>Symptoms such as <b>mood lability, delusional beliefs, hallucinations, and disorganized thinking</b> can be frightening for the women affected and for their families.</li>
+        <li>Most women with postpartum psychosis are <b>hospitalized for up to several months</b>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 10 ============ -->
+  <section class="section" id="s10">
+    <div class="section-head reveal">
+      <div class="section-num">10</div>
+      <div>
+        <h2>Menstrual & Gynecological <em>Disorders</em></h2>
+        <div class="section-kicker">Amenorrhea · Dysmenorrhea · HMB · AUB · PCOS · Endometriosis · Leiomyomas · Vaginitis · Candidiasis · Gonorrhea</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-teal reveal">
+        <h3><span class="ic"><i class="fa-solid fa-ban"></i></span>Amenorrhea</h3>
+        <p>Amenorrhea is the <b>absence of menses or menstrual bleeding</b>.</p>
+        <p>It can be the result of common events such as pregnancy, lactation, menopause, use of hormonal contraception, or the result of a pathologic condition.</p>
+      </div>
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-wave-square"></i></span>Dysmenorrhea</h3>
+        <p><b>Painful menstruation</b>, particularly in the lower abdomen and back and usually of a cramping nature.</p>
+        <ul>
+          <li>Usually associated with regular, predictable menses.</li>
+          <li><b>Primary dysmenorrhea:</b> occurs in the absence of other disease (no pelvic pathology; prostaglandin-mediated).</li>
+          <li><b>Secondary dysmenorrhea:</b> caused by a disorder such as endometriosis or leiomyomata.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-fire"></i></span>Primary Dysmenorrhea — Detail</h3>
+      <p>Primary dysmenorrhea is typically <b>recurrent, crampy</b>, and may radiate to the back or thighs. It can be accompanied by <b>nausea, fatigue, and general malaise</b>.</p>
+      <ul>
+        <li>Generally starts just before the onset of menses and lasts <b>2 or 3 days</b>.</li>
+        <li><b>Principal cause:</b> presence of <b>prostaglandins</b> released from the endometrium at the beginning of menses.</li>
+        <li>These prostaglandins induce uterine contractions which result in <b>uterine ischemia</b> and accumulation of metabolites that stimulate pain nerves.</li>
+      </ul>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-teal reveal">
+        <h3><span class="ic"><i class="fa-solid fa-droplet"></i></span>Heavy Menstrual Bleeding (HMB)</h3>
+        <p>The most common etiologies of HMB in reproductive age women are <b>Leiomyomatas</b> and <b>Adenomyosis</b>.</p>
+      </div>
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-circle-exclamation"></i></span>Abnormal Uterine Bleeding (AUB)</h3>
+        <p><b>Ovulatory AUB</b> is associated with heavy menstrual bleeding and can be caused by:</p>
+        <ul>
+          <li>Thyroid dysfunction</li>
+          <li>Coagulation defects</li>
+          <li>Endometrial polyps</li>
+          <li>Uterine fibroids</li>
+        </ul>
+        <div class="qa">
+          <div class="q"><i class="fa-solid fa-circle-question"></i> Causative factors of AUB?</div>
+          <div class="a">Thyroid dysfunction, coagulation defects, endometrial polyps, or uterine fibroids.</div>
+        </div>
+        <p style="margin-top:10px">In women between the ages of <b>19 and 39 years</b>, pregnancy, leiomyomas, polyps, PCOS, and use of hormonal contraception are common causes of AUB.</p>
+      </div>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-ribbon"></i></span>Polycystic Ovary Syndrome (PCOS)</h3>
+      <p>The three classic features are <b>hirsutism, irregular menstrual cycles, and obesity</b>.</p>
+      <h4>Assessment of PCOS</h4>
+      <p>If the diagnosis is confirmed, assessment of the risk of diabetes or cardiovascular disease is warranted, including measurement of <b>glucose, hemoglobin A1c (HbA1c), and lipid levels</b>.</p>
+      <ul>
+        <li>Insulin resistance does not always reveal itself as elevated blood glucose levels or elevated HbA1c, but more typically results in <b>blood sugar spikes and abdominal obesity</b> before the elevation of glucose levels.</li>
+        <li>On examination, an assessment of the woman's <b>BMI, blood pressure, waist-to-hip circumference, and hirsutism</b> should also be made.</li>
+        <li>A <b>waist-to-hip ratio of 0.85 or more</b> indicates abdominal obesity and an increased risk for metabolic and cardiovascular conditions.</li>
+      </ul>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> How to assess a woman with PCOS?</div>
+        <div class="a">Measure glucose, HbA1c, and lipids; assess BMI, blood pressure, waist-to-hip circumference, and hirsutism. Waist-to-hip ratio ≥0.85 indicates abdominal obesity and increased cardiometabolic risk.</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-female"></i></span>Endometriosis</h3>
+        <h4>Signs & Symptoms</h4>
+        <p>The classic symptoms of endometriosis include <b>progressive dysmenorrhea</b> and <b>deep dyspareunia</b>. Some women experience chronic, unrelieved pelvic discomfort along with dysmenorrhea and dyspareunia.</p>
+      </div>
+      <div class="card tinted-teal reveal">
+        <h3><span class="ic"><i class="fa-solid fa-circle-nodes"></i></span>Leiomyomas (Uterine Fibroids)</h3>
+        <p>Other women may present with <b>chronic pelvic pain, lower abdominal pressure, or abnormal uterine bleeding</b>.</p>
+        <p>Fibroids can cause <b>urinary frequency, rectal pressure, and interference with sexual activity and dyspareunia</b>.</p>
+        <div class="qa">
+          <div class="q"><i class="fa-solid fa-circle-question"></i> Symptoms of uterine fibroids?</div>
+          <div class="a">Chronic pelvic pain, lower abdominal pressure, abnormal uterine bleeding, urinary frequency, rectal pressure, and dyspareunia.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-virus"></i></span>Vaginitis — Bacterial Vaginosis</h3>
+      <p><b>Cause of bacterial vaginosis</b> including smoking, menstruation, douching, and sexual contact without a condom, and a low level of education.</p>
+      <ul>
+        <li>Menopausal women have an increased risk for BV because of the decrease in healthy vaginal flora noted in menopause.</li>
+        <li><b>Symptoms of BV:</b> vaginal irritation and itching, dyspareunia, gray or white discharge, and a <b>"fishy" odor</b> that is often most noticeable after intercourse.</li>
+        <li><b>Diagnosis:</b> On speculum examination, BV is usually evident as a thin white/grey homogenous discharge, irritated vaginal mucosa.</li>
+        <li><b>Gram stain</b> with the use of the <b>Nugent scoring system</b> is the gold standard for diagnosis of BV.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-microscope"></i></span>Vulvovaginal Candidiasis — Diagnosis & Treatment</h3>
+      <p>Symptoms of candidiasis include <b>vaginal itching, burning, irritation, dyspareunia, and increased vaginal discharge</b>.</p>
+      <ul>
+        <li>The vulva may be erythematous, slightly swollen, and have areas of redness with <b>1- to 2-mm "satellite" lesions</b> extending from the affected area on external examination.</li>
+        <li>The vagina is often red and slightly edematous.</li>
+        <li>The vaginal discharge is usually <b>thick, white, and curd-like</b>, but can also be thin and watery, or adherent to the vaginal walls.</li>
+      </ul>
+      <h4>Treatment</h4>
+      <ul>
+        <li>Treatment of VVC is oral medication <b>fluconazole (Diflucan)</b>.</li>
+        <li>Some complementary medicine sources recommend lifestyle changes, including <b>decreasing consumption of refined sugars and yeast products</b>.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-shield-virus"></i></span>Gonorrhea — Screening & Diagnosis</h3>
+      <p>Women at risk for gonorrhea include all <b>sexually active women younger than 25 years</b> and women with new sexual partners, more than one sex partner, a sex partner with concurrent partners, or a sex partner who has an STI.</p>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> When to recommend gonorrhea testing?</div>
+        <div class="a">Women at risk should be screened for gonorrhea <b>annually</b> — including all sexually active women &lt;25 years and older women with new/multiple partners, partner with STI, or concurrent partners.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 11 ============ -->
+  <section class="section" id="s11">
+    <div class="section-head reveal">
+      <div class="section-num">11</div>
+      <div>
+        <h2>Menopause & <em>Midlife</em></h2>
+        <div class="section-kicker">Physiology · Genitourinary syndrome · Vasomotor symptoms · Hormone therapy</div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-hourglass-half"></i></span>Physiology of Midlife, Menopause & Aging</h3>
+      <ul>
+        <li>The decreased release of <b>inhibin</b> eventually results in sustained elevation of <b>FSH</b>.</li>
+        <li>Elevated FSH levels stabilize approximately <b>24 months after the final menstrual period</b>.</li>
+        <li>After menopause, the ovaries undergo significant changes in both physical appearance and function.</li>
+        <li>A postmenopausal woman's ovaries become <b>small and are normally not palpable</b> on bimanual examination.</li>
+        <li>During the postmenopausal period, the <b>cervix gradually decreases in size and produces less mucus</b>; this change can contribute to vaginal dryness and dyspareunia.</li>
+        <li><b>Endometrial tissue becomes atrophic</b>.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-calendar-xmark"></i></span>Menopause — Late Menopausal Transition (Stage –1)</h3>
+      <p>During the late menopausal transition stage, women generally are <b>amenorrheic for spans of 60 days or longer</b>, have wide deviations in cycle length, exhibit marked fluctuations in hormone levels, and are increasingly anovulatory.</p>
+      <ul>
+        <li>In this stage, which usually lasts <b>1 to 3 years</b>, women frequently experience <b>vasomotor symptoms</b>.</li>
+        <li>The conclusion of the late menopausal transition phase is the <b>final menstrual period (FMP)</b>.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-vials"></i></span>Genitourinary Syndrome of Menopause</h3>
+      <p>At least <b>half of postmenopausal women</b> experience some external genital, urinary, and sexual changes reflective of the hypoestrogenic state that occurs during menopause.</p>
+      <h4>Changes When Estrogen Levels Diminish</h4>
+      <ul>
+        <li>The vaginal and cervical epithelium gradually becomes <b>thin, dry, and pale</b>; this tissue sometimes becomes inflamed, with a visible capillary red appearance or small petechial hemorrhages.</li>
+        <li>During perimenopause/postmenopause, the vagina transitions from an <b>acidic environment to an alkaline environment</b> with more diverse flora that can include pathogenic organisms. Vaginal secretions diminish.</li>
+        <li>Women troubled by Genitourinary Syndrome report <b>dryness or itching of the vulva and vagina, and pain upon vaginal penetration</b>.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-fire-flame-curved"></i></span>Vasomotor Symptoms in Perimenopause</h3>
+      <ul>
+        <li><b>High Prevalence:</b> Vasomotor symptoms (such as hot flashes) are extremely common during the perimenopausal period.</li>
+        <li><b>Influencing Factors:</b> A woman's individual experience with these symptoms can be shaped by her culture, diet, climate, lifestyle, and personal attitudes toward aging.</li>
+        <li><b>Demographic Trends (North America):</b> African American women report experiencing hot flashes more frequently than Hispanic, white, or Asian women.</li>
+        <li><b>Surgical vs. Natural Menopause:</b> Surgically induced menopause is linked to a higher incidence and greater severity of hot flashes compared to naturally occurring menopause.</li>
+        <li><b>Age Factor:</b> Women who reach menopause at a younger age tend to experience vasomotor symptoms more frequently.</li>
+      </ul>
+      <blockquote>Vasomotor phenomenon is characterized by recurrent, transient periods of <b>flushing, sweating, and a sensation of heat</b>, often accompanied by <b>palpitations and a feeling of anxiety</b>, and sometimes followed by chills.</blockquote>
+      <div class="qa">
+        <div class="q"><i class="fa-solid fa-circle-question"></i> How do women experience vasomotor symptoms?</div>
+        <div class="a">Recurrent, transient periods of flushing, sweating, and a sensation of heat, often accompanied by palpitations and a feeling of anxiety, and sometimes followed by chills.</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card tinted-gold reveal">
+        <h3><span class="ic"><i class="fa-solid fa-prescription-bottle-medical"></i></span>Hormone Therapy for Menopausal Symptoms</h3>
+        <p>The most effective treatment for <b>vasomotor symptoms and vaginal atrophy</b> related to menopause is <b>hormone therapy (HT)</b> with estrogen or estrogen and progestin.</p>
+        <p>The risks and benefits associated with HT are complex and may be related to the <b>age at which therapy is initiated</b>.</p>
+      </div>
+      <div class="card tinted-coral reveal">
+        <h3><span class="ic"><i class="fa-solid fa-triangle-exclamation"></i></span>Contraindications for Hormone Therapy</h3>
+        <p>Contraindications for Estrogen Therapy / Estrogen plus Progesterone Therapy include:</p>
+        <ul>
+          <li>Undiagnosed abnormal vaginal bleeding</li>
+          <li>Known, suspected, or history of breast cancer</li>
+          <li>Known or suspected estrogen-dependent cancer</li>
+          <li>Current or history of deep vein thrombosis or pulmonary embolism</li>
+          <li>Current or recent (within the last year) stroke or myocardial infarction</li>
+          <li>Liver disease</li>
+          <li>Known or suspected pregnancy</li>
+          <li>Known hypersensitivity to ET/EPT</li>
+        </ul>
+        <p style="margin-top:10px"><b>Smoking</b> is not a contraindication to ET/EPT, although it is a contraindication for combined hormonal contraceptive use by women older than 35 years.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 12 ============ -->
+  <section class="section" id="s12">
+    <div class="section-head reveal">
+      <div class="section-num">12</div>
+      <div>
+        <h2>Breast <em>Conditions</em></h2>
+        <div class="section-kicker">Engorgement · Cracked/retracted nipple · Acute mastitis · Breast abscess</div>
+      </div>
+    </div>
+
+    <div class="card tinted-teal reveal">
+      <h3><span class="ic"><i class="fa-solid fa-heart-circle-plus"></i></span>Breast Engorgement</h3>
+      <h4>Prevention</h4>
+      <ol style="padding-left:22px;line-height:1.95">
+        <li>To avoid prelacteal feeds</li>
+        <li>To initiate breastfeeding early and unrestricted</li>
+        <li>Exclusive breastfeeding on demand</li>
+        <li>Feeding in correct position</li>
+        <li>Correct latch on</li>
+      </ol>
+      <h4>Treatment</h4>
+      <ol style="padding-left:22px;line-height:1.95">
+        <li>To support the breasts with a binder or brassiere</li>
+        <li>Frequent suckling</li>
+        <li>Manual expression of any remaining milk after each feed</li>
+        <li>To administer analgesics for pain</li>
+        <li>The baby should be put to the breast regularly at frequent intervals</li>
+        <li>In a severe case, gentle use of a breast pump may be helpful. This will reduce the tension in the breast without causing excess milk production.</li>
+      </ol>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-undo"></i></span>Cracked and Retracted Nipple</h3>
+      <h4>Treatment</h4>
+      <ul>
+        <li><b>Correct attachment (latch on)</b> will provide immediate relief from pain and rapid healing.</li>
+        <li><b>Fresh human milk and saliva</b> have got healing properties.</li>
+        <li><b>Purified lanolin</b> with the mother's milk is applied three or four times a day to hasten healing.</li>
+        <li>When severe, mother should use a breast pump, and the infant is fed with the expressed milk.</li>
+        <li>Inflamed nipple and areola may be due to <b>thrush</b> also.</li>
+        <li><b>Miconazole lotion</b> is applied over the nipple as well as in the baby's mouth if there is oral thrush.</li>
+        <li>If it fails to heal up, rest is given to the affected nipple using a breast pump while the nipples heal. <b>Nipple shields</b> (thin latex) can be used.</li>
+        <li>The persistence of a nipple ulcer, despite therapy mentioned, needs <b>biopsy to exclude malignancy</b>.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-gold reveal">
+      <h3><span class="ic"><i class="fa-solid fa-fire"></i></span>Acute Mastitis — Management</h3>
+      <ul>
+        <li><b>(a)</b> Breast support</li>
+        <li><b>(b)</b> Plenty of oral fluids</li>
+        <li><b>(c)</b> Breastfeeding is continued with good attachment. Nursing is initiated on the <b>uninfected side first</b> to establish let down.</li>
+        <li><b>(d)</b> The infected side is <b>emptied manually</b> with each feed.</li>
+        <li><b>(e)</b> <b>Dicloxacillin</b> (penicillinase resistant penicillin) is the drug of choice. Antibiotic therapy is continued for <b>10–14 days</b>.</li>
+        <li><b>(f)</b> Analgesics (<b>ibuprofen</b>) are given for pain.</li>
+        <li><b>(g)</b> Milk flow is maintained by breastfeeding the infant. This prevents proliferation of <b>Staphylococcus</b> in the stagnant milk. The ingested Staphylococcus will be digested without any harm.</li>
+      </ul>
+    </div>
+
+    <div class="card tinted-coral reveal">
+      <h3><span class="ic"><i class="fa-solid fa-bandage"></i></span>Breast Abscess</h3>
+      <p>Breast abscess is to be <b>drained under general anesthesia</b> by a <b>deep radial incision</b> extending from near the areolar margin to prevent injury of the lactiferous ducts.</p>
+      <ul>
+        <li>The cavity is loosely packed with gauze which should be replaced after <b>24 hours</b> by a smaller pack. The procedure is continued till it heals up.</li>
+        <li>The abscess can also be drained by <b>serial percutaneous needle aspiration under ultrasound guidance</b>.</li>
+        <li>Breastfeeding is continued in the <b>uninvolved side</b>.</li>
+        <li>The infected breast is <b>mechanically pumped every 2 hours</b> and with every let down.</li>
+        <li><b>Recurrence risk is about 10%.</b></li>
+        <li>Once cellulitis has resolved, breastfeeding from the involved side may be resumed.</li>
+        <li>Antibiotics to be continued depending upon the <b>culture report of pus</b>.</li>
+      </ul>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-inner">
+    <h3>Care that <em>begins</em> with<br>understanding.</h3>
+    <p>This clinical review compiles essential maternal and women's health knowledge — from cardiac disease and anemia in pregnancy, through the mechanisms and stages of labour, into postpartum adaptation and gynaecological care across the lifespan. Built as a reference for nursing and midwifery practice.</p>
+    <div class="foot-meta">
+      <span>MATERNAL · WOMEN'S HEALTH · CLINICAL REVIEW</span>
+      <span>12 SECTIONS · COMPLETE REFERENCE</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Smooth active link highlight on TOC
+  const links = document.querySelectorAll('.toc a');
+  const sections = [...document.querySelectorAll('.section')];
+  window.addEventListener('scroll',()=>{
+    const y = window.scrollY + 120;
+    let cur = sections[0];
+    sections.forEach(s=>{ if(s.offsetTop <= y) cur = s; });
+    links.forEach(l=>{
+      l.style.background = '';
+      l.style.color = '';
+      if(l.getAttribute('href') === '#'+cur.id){
+        l.style.background = 'var(--teal-dark)';
+        l.style.color = 'var(--paper)';
+      }
+    });
+  });
+</script>
+</body>
+</html>
